@@ -11,7 +11,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center space-x-2">
               <ShieldCheck className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold tracking-tight text-white dark:text-primary">
-                Clicks<span className="text-primary dark:text-white">pay</span>
+                ClicksPay<span className="text-primary dark:text-white">Agency</span>
               </span>
             </Link>
             <p className="text-sm text-secondary-foreground/70 dark:text-slate-400 max-w-xs">
