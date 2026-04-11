@@ -25,7 +25,7 @@ export default function Navbar() {
               <ShieldCheck className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold tracking-tight text-secondary">
-              ClicksPay<span className="text-primary">Exchange</span>
+              ClicksPay<span className="text-primary">Agency</span>
             </span>
           </div>
         </Link>
