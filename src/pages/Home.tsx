@@ -236,9 +236,9 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold">
                 <Lock className="h-4 w-4" /> Secure & Compliant
               </div>
-              <h2 className="text-4xl font-bold text-secondary dark:text-white">Your Security is Our Top Priority</h2>
-              <p className="text-slate-600 dark:text-slate-400 text-lg">
-                We use graded encryption and follow strict compliance standards to ensure your data and transactions are always protected.
+              <h2 className="text-4xl font-bold text-secondary">Your Security is Our Top Priority</h2>
+              <p className="text-slate-600 text-lg">
+                We use bank-grade encryption and follow strict compliance standards to ensure your data and transactions are always protected.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
