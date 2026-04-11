@@ -275,8 +275,8 @@ export default function Home() {
                       <ShieldCheck className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-secondary">Verified Provider</p>
-                      <p className="text-xs text-slate-500">Compliance ID: CP-2026-0410</p>
+                      <p className="text-sm font-bold text-secondary">Verified Deriv Payment Agent</p>
+                      <p className="text-xs text-slate-500">Deriv Username: ClicksPay Exchange</p>
                     </div>
                   </div>
                 </div>
