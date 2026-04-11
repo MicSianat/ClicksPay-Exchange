@@ -238,7 +238,7 @@ export default function Home() {
               </div>
               <h2 className="text-4xl font-bold text-secondary">Your Security is Our Top Priority</h2>
               <p className="text-slate-600 text-lg">
-                We use bank-grade encryption and follow strict compliance standards to ensure your data and transactions are always protected.
+                We use graded encryption and follow strict compliance standards to ensure your data and transactions are always protected.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
