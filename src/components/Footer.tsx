@@ -3,18 +3,18 @@ import { ShieldCheck, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground border-t">
+    <footer className="bg-secondary dark:bg-slate-950 text-secondary-foreground border-t dark:border-slate-800">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
               <ShieldCheck className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold tracking-tight text-white">
-                Clicks<span className="text-primary">pay</span>
+              <span className="text-xl font-bold tracking-tight text-white dark:text-primary">
+                Clicks<span className="text-primary dark:text-white">pay</span>
               </span>
             </Link>
-            <p className="text-sm text-secondary-foreground/70 max-w-xs">
+            <p className="text-sm text-secondary-foreground/70 dark:text-slate-400 max-w-xs">
               Your Secure Gateway to Seamless Transactions. We bridge the gap for individuals and businesses with reliable payment solutions.
             </p>
             <div className="flex space-x-4">

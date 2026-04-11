@@ -11,23 +11,26 @@ import Calculator from "./pages/Calculator";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/landing" element={<Landing />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="/calculator" element={<Calculator />} />
-          </Routes>
-        </main>
-        <Footer />
-        <Toaster position="top-center" />
-      </div>
-    </Router>
+    <ThemeProvider defaultTheme="light" storageKey="clickspay-theme">
+      <Router>
+        <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/landing" element={<Landing />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/calculator" element={<Calculator />} />
+            </Routes>
+          </main>
+          <Footer />
+          <Toaster position="top-center" />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }

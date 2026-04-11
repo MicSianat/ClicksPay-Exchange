@@ -63,8 +63,8 @@ export default function Support() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-secondary">How can we <span className="text-primary">help you?</span></h1>
-          <p className="text-slate-600 text-lg">
+          <h1 className="text-4xl md:text-5xl font-bold text-secondary dark:text-white">How can we <span className="text-primary">help you?</span></h1>
+          <p className="text-slate-600 dark:text-slate-400 text-lg">
             Whether you have a question about our services or need technical assistance, our team is here for you.
           </p>
         </motion.div>
@@ -74,25 +74,25 @@ export default function Support() {
         {/* Contact Info */}
         <div className="lg:col-span-1 space-y-8">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-secondary">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-secondary dark:text-white">Contact Information</h2>
             <div className="space-y-4">
-              <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-4 p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
                 <div className="h-10 w-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-secondary">Call Us</p>
-                  <p className="text-sm text-slate-500">+260 974 136 458</p>
+                  <p className="font-bold text-secondary dark:text-white">Call Us</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">+260 974 136 458</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <div className="flex items-start gap-4 p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
                 <div className="h-10 w-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-bold text-secondary">Working Hours</p>
-                  <p className="text-sm text-slate-500">Mon - Fri: 08:00 - 18:00</p>
-                  <p className="text-sm text-slate-500">Sat: 09:00 - 13:00</p>
+                  <p className="font-bold text-secondary dark:text-white">Working Hours</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Mon - Fri: 08:00 - 18:00</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Sat: 09:00 - 13:00</p>
                 </div>
               </div>
             </div>
@@ -118,30 +118,30 @@ export default function Support() {
 
         {/* Contact Form & FAQ */}
         <div className="lg:col-span-2 space-y-12">
-          <Card className="border-none shadow-xl rounded-[2rem] overflow-hidden">
-            <CardHeader className="bg-slate-50 border-b p-8">
-              <CardTitle className="text-2xl">Send us a Message</CardTitle>
-              <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
+          <Card className="border-none shadow-xl rounded-[2rem] overflow-hidden bg-white dark:bg-slate-800">
+            <CardHeader className="bg-slate-50 dark:bg-slate-900/50 border-b dark:border-slate-700 p-8">
+              <CardTitle className="text-2xl dark:text-white">Send us a Message</CardTitle>
+              <CardDescription className="dark:text-slate-400">Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent className="p-8">
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" placeholder="John Doe" required />
+                    <Label htmlFor="name" className="dark:text-slate-300">Full Name</Label>
+                    <Input id="name" placeholder="John Doe" required className="dark:bg-slate-900 dark:border-slate-700" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" required />
+                    <Label htmlFor="email" className="dark:text-slate-300">Email Address</Label>
+                    <Input id="email" type="email" placeholder="john@example.com" required className="dark:bg-slate-900 dark:border-slate-700" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input id="subject" placeholder="How can we help?" required />
+                  <Label htmlFor="subject" className="dark:text-slate-300">Subject</Label>
+                  <Input id="subject" placeholder="How can we help?" required className="dark:bg-slate-900 dark:border-slate-700" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell us more about your inquiry..." className="min-h-[150px]" required />
+                  <Label htmlFor="message" className="dark:text-slate-300">Message</Label>
+                  <Textarea id="message" placeholder="Tell us more about your inquiry..." className="min-h-[150px] dark:bg-slate-900 dark:border-slate-700" required />
                 </div>
                 <Button type="submit" disabled={isSubmitting} className="w-full h-12 bg-primary hover:bg-primary/90 rounded-xl font-bold">
                   {isSubmitting ? "Sending..." : "Send Message"} <Send className="ml-2 h-4 w-4" />
@@ -153,15 +153,15 @@ export default function Support() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <HelpCircle className="h-8 w-8 text-primary" />
-              <h2 className="text-2xl font-bold text-secondary">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-secondary dark:text-white">Frequently Asked Questions</h2>
             </div>
             <Accordion type="single" collapsible className="w-full space-y-4">
               {faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border rounded-2xl px-6 bg-white overflow-hidden shadow-sm">
-                  <AccordionTrigger className="hover:no-underline font-bold text-secondary py-6">
+                <AccordionItem key={idx} value={`item-${idx}`} className="border rounded-2xl px-6 bg-white dark:bg-slate-800 dark:border-slate-700 overflow-hidden shadow-sm">
+                  <AccordionTrigger className="hover:no-underline font-bold text-secondary dark:text-white py-6">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-slate-600 pb-6 leading-relaxed">
+                  <AccordionContent className="text-slate-600 dark:text-slate-400 pb-6 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

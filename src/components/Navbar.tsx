@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -24,8 +25,8 @@ export default function Navbar() {
             <div className="bg-primary p-1.5 rounded-lg">
               <ShieldCheck className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-secondary">
-              ClicksPay<span className="text-primary">Exchange</span>
+            <span className="text-xl font-bold tracking-tight text-secondary dark:text-white">
+              ClicksPay<span className="text-primary">Agency</span>
             </span>
           </div>
         </Link>
@@ -45,6 +46,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Button
               render={<a href="https://wa.me/260974136458" target="_blank" rel="noopener noreferrer" />}
               nativeButton={false}
@@ -58,6 +60,7 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
           <Button
             render={<a href="https://wa.me/260974136458" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}

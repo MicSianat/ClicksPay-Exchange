@@ -107,20 +107,20 @@ export default function Home() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50 dark:bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4"
+              className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 space-y-4"
             >
               <div className="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-secondary">Our Vision</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <h2 className="text-3xl font-bold text-secondary dark:text-white">Our Vision</h2>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 To become a trusted and leading provider of crypto exchange and payment agent services, known for reliability, accessibility, efficiency, and customer satisfaction.
               </p>
             </motion.div>
@@ -129,13 +129,13 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4"
+              className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 space-y-4"
             >
               <div className="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
-              <h2 className="text-3xl font-bold text-secondary">Our Mission</h2>
-              <p className="text-slate-600 leading-relaxed">
+              <h2 className="text-3xl font-bold text-secondary dark:text-white">Our Mission</h2>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 To provide secure, efficient, and customer-friendly crypto and payment support services that promote convenience, accessibility, and financial inclusion for individuals and businesses.
               </p>
             </motion.div>
@@ -148,8 +148,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">Our Business Activities</h2>
-            <h3 className="text-4xl font-bold text-secondary">Comprehensive Payment Solutions</h3>
-            <p className="text-slate-600">We offer a range of services designed to make your financial life easier and more secure.</p>
+            <h3 className="text-4xl font-bold text-secondary dark:text-white">Comprehensive Payment Solutions</h3>
+            <p className="text-slate-600 dark:text-slate-400">We offer a range of services designed to make your financial life easier and more secure.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -161,18 +161,18 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow rounded-3xl overflow-hidden">
+                <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow rounded-3xl overflow-hidden bg-white dark:bg-slate-800">
                   <CardContent className="p-8 space-y-6">
-                    <div className="h-14 w-14 bg-secondary rounded-2xl flex items-center justify-center">
+                    <div className="h-14 w-14 bg-secondary dark:bg-slate-700 rounded-2xl flex items-center justify-center">
                       <service.icon className="h-7 w-7 text-primary" />
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-2xl font-bold text-secondary">{service.title}</h4>
+                      <h4 className="text-2xl font-bold text-secondary dark:text-white">{service.title}</h4>
                       <p className="text-primary font-medium">{service.subtitle}</p>
                     </div>
                     <ul className="space-y-3">
                       {service.features.map((feature, fIdx) => (
-                        <li key={fIdx} className="flex items-center gap-3 text-slate-600">
+                        <li key={fIdx} className="flex items-center gap-3 text-slate-600 dark:text-slate-400">
                           <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -231,37 +231,37 @@ export default function Home() {
       {/* Trust & Security */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+          <div className="bg-primary/5 dark:bg-primary/10 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold">
                 <Lock className="h-4 w-4" /> Secure & Compliant
               </div>
-              <h2 className="text-4xl font-bold text-secondary">Your Security is Our Top Priority</h2>
-              <p className="text-slate-600 text-lg">
-                We use bank-grade encryption and follow strict compliance standards to ensure your data and transactions are always protected.
+              <h2 className="text-4xl font-bold text-secondary dark:text-white">Your Security is Our Top Priority</h2>
+              <p className="text-slate-600 dark:text-slate-400 text-lg">
+                We use graded encryption and follow strict compliance standards to ensure your data and transactions are always protected.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
-                  <h4 className="font-bold text-secondary">256-bit Encryption</h4>
-                  <p className="text-sm text-slate-500">Industry standard data protection</p>
+                  <h4 className="font-bold text-secondary dark:text-white">256-bit Encryption</h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Industry standard data protection</p>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-bold text-secondary">Fraud Prevention</h4>
-                  <p className="text-sm text-slate-500">Real-time monitoring systems</p>
+                  <h4 className="font-bold text-secondary dark:text-white">Fraud Prevention</h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Real-time monitoring systems</p>
                 </div>
               </div>
             </div>
             <div className="md:w-1/2 relative">
               <div className="aspect-square bg-primary/10 rounded-full absolute -top-10 -right-10 w-64 h-64 blur-3xl" />
-              <div className="relative z-10 bg-white p-8 rounded-3xl shadow-2xl border border-slate-100">
+              <div className="relative z-10 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-secondary">Security Status</span>
-                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">ACTIVE</span>
+                    <span className="font-bold text-secondary dark:text-white">Security Status</span>
+                    <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-xs font-bold">ACTIVE</span>
                   </div>
                   <div className="space-y-4">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-4 bg-slate-100 rounded-full w-full overflow-hidden">
+                      <div key={i} className="h-4 bg-slate-100 dark:bg-slate-700 rounded-full w-full overflow-hidden">
                         <motion.div 
                           initial={{ width: 0 }}
                           whileInView={{ width: `${80 + i * 5}%` }}
@@ -271,12 +271,12 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="pt-4 flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center">
+                    <div className="h-12 w-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
                       <ShieldCheck className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-secondary">Verified Provider</p>
-                      <p className="text-xs text-slate-500">Compliance ID: CP-2026-0410</p>
+                      <p className="text-sm font-bold text-secondary dark:text-white">Verified Deriv Payment Agent</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Deriv Username: ClicksPay Exchange</p>
                     </div>
                   </div>
                 </div>
