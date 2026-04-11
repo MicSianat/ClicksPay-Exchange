@@ -25,8 +25,8 @@ export default function Navbar() {
             <div className="bg-primary p-1.5 rounded-lg">
               <ShieldCheck className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-secondary">
-              ClicksPay<span className="text-primary">Agency</span>
+            <span className="text-xl font-bold tracking-tight text-secondary dark:text-white">
+              ClicksPay<span className="text-primary hidden sm:inline">Agency</span>
             </span>
           </div>
         </Link>
@@ -59,13 +59,13 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Nav */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="md:hidden flex items-center gap-2 sm:gap-4">
           <ThemeToggle />
           <Button
             render={<a href="https://wa.me/260974136458" target="_blank" rel="noopener noreferrer" />}
             nativeButton={false}
             size="sm"
-            className="h-8 px-3 rounded-full"
+            className="h-8 px-2 sm:px-3 rounded-full text-[10px] sm:text-xs"
           >
             WhatsApp
           </Button>

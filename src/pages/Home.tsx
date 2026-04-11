@@ -148,7 +148,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary">Our Business Activities</h2>
-            <h3 className="text-4xl font-bold text-secondary dark:text-white">Comprehensive Payment Solutions</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-secondary dark:text-white">Comprehensive Payment Solutions</h3>
             <p className="text-slate-600 dark:text-slate-400">We offer a range of services designed to make your financial life easier and more secure.</p>
           </div>
           
@@ -231,16 +231,16 @@ export default function Home() {
       {/* Trust & Security */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-primary/5 dark:bg-primary/10 rounded-[3rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 space-y-6">
+          <div className="bg-primary/5 dark:bg-primary/10 rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2 space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-bold">
                 <Lock className="h-4 w-4" /> Secure & Compliant
               </div>
-              <h2 className="text-4xl font-bold text-secondary">Your Security is Our Top Priority</h2>
-              <p className="text-slate-600 text-lg">
-                We use bank-grade encryption and follow strict compliance standards to ensure your data and transactions are always protected.
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary dark:text-white">Your Security is Our Top Priority</h2>
+              <p className="text-slate-600 dark:text-slate-400 text-lg">
+                We use graded encryption and follow strict compliance standards to ensure your data and transactions are always protected.
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
                   <h4 className="font-bold text-secondary dark:text-white">256-bit Encryption</h4>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Industry standard data protection</p>
@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 relative">
+            <div className="lg:w-1/2 w-full relative">
               <div className="aspect-square bg-primary/10 rounded-full absolute -top-10 -right-10 w-64 h-64 blur-3xl" />
               <div className="relative z-10 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700">
                 <div className="space-y-6">
@@ -289,7 +289,7 @@ export default function Home() {
       {/* CTA */}
       <section className="py-20 bg-primary text-white text-center">
         <div className="container mx-auto px-4 space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold max-w-3xl mx-auto">Ready to Experience Seamless Transactions?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold max-w-3xl mx-auto">Ready to Experience Seamless Transactions?</h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             Contact us today on WhatsApp to get started with our secure payment agent services.
           </p>
