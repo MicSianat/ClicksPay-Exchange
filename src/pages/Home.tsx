@@ -12,7 +12,8 @@ import {
   TrendingUp,
   Globe,
   Lock,
-  Bitcoin
+  Bitcoin,
+  Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -23,6 +24,45 @@ const coreValues = [
   { icon: Lightbulb, title: "Innovation", desc: "Modern tools & solutions for modern problems." },
   { icon: Handshake, title: "Reliability", desc: "Consistent trust you can depend on." },
   { icon: ShieldCheck, title: "Professionalism", desc: "Maintaining high standards of conduct." },
+];
+
+const testimonials = [
+  {
+    name: "Kelvin Musonda",
+    role: "Crypto Trader",
+    content: "Clickspay has been my go-to for USDT transactions. Their rates are competitive and the service is incredibly fast!",
+    avatar: "KM"
+  },
+  {
+    name: "Sarah Phiri",
+    role: "Business Owner",
+    content: "Reliable and professional. I use their payment agent services for my business disbursements and it's always seamless.",
+    avatar: "SP"
+  },
+  {
+    name: "John Banda",
+    role: "Deriv User",
+    content: "The best Deriv payment agent in Zambia. Deposits and withdrawals are handled with high integrity. Highly recommended!",
+    avatar: "JB"
+  },
+  {
+    name: "Mwanza Chanda",
+    role: "Freelancer",
+    content: "I've tried many agents, but Clickspay is by far the most reliable. Their WhatsApp support is always responsive.",
+    avatar: "MC"
+  },
+  {
+    name: "Loveness Zulu",
+    role: "Online Merchant",
+    content: "Fast, secure, and transparent. The currency converter is very helpful for planning my transactions.",
+    avatar: "LZ"
+  },
+  {
+    name: "David Lungu",
+    role: "Investor",
+    content: "Great experience every time. The dark mode is a nice touch for late-night trading sessions!",
+    avatar: "DL"
+  }
 ];
 
 const services = [
@@ -283,6 +323,61 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
+        <div className="container mx-auto px-4 mb-12">
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-primary">Testimonials</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-secondary dark:text-white">What Our Clients Say</h3>
+            <p className="text-slate-600 dark:text-slate-400">Trusted by individuals and businesses across Zambia.</p>
+          </div>
+        </div>
+
+        <div className="relative flex overflow-x-hidden">
+          {/* Edge Fades */}
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-50 dark:from-[#020617] to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-50 dark:from-[#020617] to-transparent z-10" />
+
+          <motion.div 
+            className="flex gap-8 py-4 whitespace-nowrap"
+            animate={{
+              x: [-1920, 0], // Sliding from left to right
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 50,
+                ease: "linear",
+              },
+            }}
+            style={{ width: "fit-content" }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, idx) => (
+              <div key={idx} className="w-[350px] sm:w-[400px] flex-shrink-0">
+                <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow rounded-3xl overflow-hidden bg-white dark:bg-slate-800">
+                  <CardContent className="p-8 space-y-6 flex flex-col h-full whitespace-normal">
+                    <Quote className="h-10 w-10 text-primary/20 mb-2" />
+                    <p className="text-slate-600 dark:text-slate-300 italic flex-grow leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                    <div className="pt-6 flex items-center gap-4 border-t border-slate-100 dark:border-slate-700">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-secondary dark:text-white">{testimonial.name}</h4>
+                        <p className="text-xs text-slate-500 dark:text-slate-400">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
