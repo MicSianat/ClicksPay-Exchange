@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, Phone } from "lucide-react";
+import { ShieldCheck, Phone, AlertTriangle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -53,6 +53,32 @@ export default function Footer() {
                 <span>+260 974 136 458</span>
               </li>
             </ul>
+          </div>
+        </div>
+        
+        {/* Financial Disclaimer */}
+        <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="flex items-center gap-3 text-amber-500/80">
+              <AlertTriangle className="h-5 w-5 shrink-0" />
+              <h4 className="text-sm font-bold uppercase tracking-wider">Risk Disclaimer</h4>
+            </div>
+            <div className="space-y-3 text-[11px] text-secondary-foreground/50 dark:text-slate-400/60 leading-relaxed">
+              <p>
+                Trading foreign exchange (Forex), cryptocurrencies, and other financial instruments involves a high level of risk and may not be suitable for all investors. 
+                The high degree of leverage available can work against you as well as for you. Before deciding to trade or invest, you should carefully consider 
+                your investment objectives, level of experience, and risk appetite.
+              </p>
+              <p>
+                Exchange rates are subject to constant market fluctuations and can change rapidly without prior notice. ClicksPayAgency provides payment agent 
+                and exchange services for convenience and accessibility but does not provide financial, investment, or trading advice. Any decisions made 
+                based on the information or services provided are at the user's own risk.
+              </p>
+              <p>
+                You should be aware of all the risks associated with financial markets and seek advice from an independent financial advisor if you have any doubts. 
+                ClicksPayAgency shall not be held liable for any losses incurred as a result of market volatility or trading activities.
+              </p>
+            </div>
           </div>
         </div>
 
