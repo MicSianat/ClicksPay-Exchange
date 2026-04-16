@@ -27,7 +27,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-secondary-foreground/70">
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/landing" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/calculator" className="hover:text-primary transition-colors">Currency Converter</Link></li>
+              <li><Link to="/calculator" className="hover:text-primary transition-colors">Calculators</Link></li>
               <li><Link to="/support" className="hover:text-primary transition-colors">Support Center</Link></li>
             </ul>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         {/* Financial Disclaimer */}
         <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
           <div className="max-w-4xl mx-auto space-y-4">
@@ -81,8 +81,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-secondary-foreground/10 text-center text-xs text-secondary-foreground/50">
+        
+        <div className="mt-8 pt-8 border-t border-secondary-foreground/5 text-center text-[10px] text-secondary-foreground/30">
           <p>© {new Date().getFullYear()} Clickspay. All rights reserved. Your Secure Gateway to Seamless Transactions.</p>
         </div>
       </div>

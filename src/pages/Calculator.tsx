@@ -10,9 +10,6 @@ import { cn } from "@/lib/utils";
 const FALLBACK_RATE = 25.45;
 
 export default function Calculator() {
-  const [amount, setAmount] = useState<string>("100");
-  const [fromCurrency, setFromCurrency] = useState<"ZMW" | "USD">("ZMW");
-  const [result, setResult] = useState<number>(0);
   const [exchangeRate, setExchangeRate] = useState<number>(FALLBACK_RATE);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -36,15 +33,6 @@ export default function Calculator() {
 
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    const val = parseFloat(amount) || 0;
-    if (fromCurrency === "ZMW") {
-      setResult(val / exchangeRate);
-    } else {
-      setResult(val * exchangeRate);
-    }
-  }, [amount, fromCurrency, exchangeRate]);
 
   const [usdtAmount, setUsdtAmount] = useState<string>("100");
   const [usdtMode, setUsdtMode] = useState<"buy" | "sell">("buy");
@@ -81,10 +69,6 @@ export default function Calculator() {
     }
   }, [derivAmount, derivMode, exchangeRate]);
 
-  const toggleCurrency = () => {
-    setFromCurrency(prev => prev === "ZMW" ? "USD" : "ZMW");
-  };
-
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -94,10 +78,10 @@ export default function Calculator() {
             animate={{ opacity: 1, x: 0 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
-              Real-time <span className="text-primary">Currency Converter</span>
+              Transaction <span className="text-primary">Calculators</span>
             </h1>
             <p className="text-slate-600 text-lg">
-              Get accurate conversion rates between Zambian Kwacha (ZMW) and US Dollars (USD). Our rates are updated frequently to ensure you get the best value.
+              Calculate your USDT and Deriv transactions with our live market rates. Our rates are updated frequently to ensure you get the best value.
             </p>
           </motion.div>
 
@@ -126,64 +110,7 @@ export default function Calculator() {
         </div>
 
         <div className="lg:col-span-2 space-y-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Standard Converter */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-            >
-              <Card className="border-none shadow-xl rounded-[2rem] overflow-hidden h-full bg-white dark:bg-slate-800">
-                <CardHeader className="bg-secondary text-white p-6">
-                  <CardTitle className="text-xl">Currency Converter</CardTitle>
-                  <CardDescription className="text-white/60">ZMW ↔ USD Exchange</CardDescription>
-                </CardHeader>
-                <CardContent className="p-6 space-y-6">
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="amount" className="text-sm font-bold text-secondary dark:text-slate-300">Amount in {fromCurrency}</Label>
-                      <div className="relative">
-                        <Input
-                          id="amount"
-                          type="number"
-                          value={amount}
-                          onChange={(e) => setAmount(e.target.value)}
-                          className="h-12 text-lg pl-4 pr-16 rounded-xl border-slate-200 dark:border-slate-700 focus:ring-primary bg-white dark:bg-slate-900/50"
-                          placeholder="0.00"
-                        />
-                        <div className="absolute right-4 top-1/2 -translate-y-1/2 font-bold text-slate-400 dark:text-slate-500">
-                          {fromCurrency}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-center py-1">
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        onClick={toggleCurrency}
-                        className="h-10 w-10 rounded-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all shadow-md dark:bg-slate-900 dark:border-slate-700"
-                      >
-                        <ArrowRightLeft className="h-5 w-5" />
-                      </Button>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label className="text-sm font-bold text-secondary dark:text-slate-300">Converted Amount ({fromCurrency === "ZMW" ? "USD" : "ZMW"})</Label>
-                      <div className="h-12 bg-slate-50 dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center px-4 justify-between">
-                        <span className="text-xl font-bold text-secondary dark:text-white">
-                          {result.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                        </span>
-                        <span className="font-bold text-primary">
-                          {fromCurrency === "ZMW" ? "USD" : "ZMW"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
+          <div className="max-w-2xl mx-auto">
             {/* USDT Calculator */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}

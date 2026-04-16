@@ -54,7 +54,7 @@ const testimonials = [
   {
     name: "Loveness Zulu",
     role: "Online Merchant",
-    content: "Fast, secure, and transparent. The currency converter is very helpful for planning my transactions.",
+    content: "Fast, secure, and transparent. The calculators are very helpful for planning my transactions.",
     avatar: "LZ"
   },
   {
@@ -409,6 +409,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+  
     </div>
   );
 }
